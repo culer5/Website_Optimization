@@ -26,7 +26,9 @@ To optimize views/pizza.html, you will need to modify views/js/main.js until you
 
 The code review identified the following areas to correct:
  querySelectorAll is slower than getElementsByClassName, so they've been switched in main.js
- move variables out of the for loops to reduce the number of times the DOM was touched so I moved that in the resize pizza function and the update positions function.
+ 
+ Move variables out of the for loops to reduce the number of times the DOM was touched so I moved that in the resize pizza function and the update positions function.
+ 
  In addition, I inlined the critical CSS
  
  #### Acknowledgments:
