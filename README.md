@@ -7,7 +7,7 @@ To get started, check out the repository and inspect the code.
 
 ### Getting started
 
-To run, you can either navigate to https://culer5.github.io/project-5-redo/, or install the project on your machine. To do that, either clone the repository using git, or click the download zip button on the right and unzip the file.
+To run, you can either navigate to https://culer5.github.io/Website_Optimization/, or install the project on your machine. To do that, either clone the repository using git, or click the download zip button on the right and unzip the file.
 
 To view the optimized page, double-click index.html.
 
