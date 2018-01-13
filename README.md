@@ -22,11 +22,12 @@ I utilized tinyjpg.com to compress all of my images.
 
 #### Part 2: Optimize Frames per Second in pizza.html
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
+To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or lower. You will find instructive comments in main.js. 
 
 The code review identified the following areas to correct:
  querySelectorAll is slower than getElementsByClassName, so they've been switched in main.js
  move variables out of the for loops to reduce the number of times the DOM was touched so I moved that in the resize pizza function and the update positions function.
+ In addition, I inlined the critical CSS
  
  #### Acknowledgments:
  Learn Javascript Visually by Ivelin Demirov
