@@ -31,6 +31,8 @@ The code review identified the following areas to correct:
  
  In addition, I inlined the critical CSS
  
+ I left off <style></style> tags in pizza.html!
+ 
  #### Acknowledgments:
  Learn Javascript Visually by Ivelin Demirov
  A Smarter Way to Learn Javascript by Mark Myers.
