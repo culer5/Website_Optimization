@@ -453,12 +453,17 @@ var resizePizzas = function (size) {
     /* ----------------------------------------------------------------------------
       querySelectorAll is slower than getElementsByClassName, they've been switched
     ---------------------------------------------------------------------------- */
+    /* Made this new variable from what was once the start of the function and
+    was coached to create the pizzaElements variable first and dx and newwidth after,
+    which would save 2 queries for the browser. This would also be able to replace
+    document.getElementsByClassName("randomPizzaContainer")[1] with pizzaElements[1].
+    */
     function changePizzaSizes(size) {
-
-        var dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[1], size);
-        var newwidth = (document.getElementsByClassName("randomPizzaContainer")[1].offsetWidth + dx) + 'px';
-        // Made this new variable from what was once the start of the function
         var pizzaElements = document.getElementsByClassName("randomPizzaContainer");
+        var dx = determineDx(pizzaElements[1], size);
+        var newwidth = (pizzaElements[1].offsetWidth + dx) + 'px';
+
+
         /* ---------------------------------------------
         I moved the for loop down here in the function,
         so that it calculates the variables first
@@ -545,7 +550,9 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function () {
     var cols = 8;
     var s = 256;
-    for (var i = 0; i < 24; i++) {
+    var rows = screen.availHeight / s;
+    var numberOfMovers = rows * cols;
+    for (var i = 0; i < numberOfMovers; i++) {
         var elem = document.createElement('img');
         elem.className = 'mover';
         elem.src = "images/pizza.png";
